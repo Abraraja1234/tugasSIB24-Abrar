@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>belajar js.dasar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>belajar js.dasar</h1>
+    </header>
+    <section id="javascript">
+        <h2>JavaScript</h2>
+        <p>JavaScript adalah bahasa pemrograman yang digunakan untuk membuat halaman web menjadi lebih interaktif.</p>
+        <p>Dapatkan tutorial JavaScript lengkap <a href="https://www.w3schools.com/js/">di sini</a>.</p>
+        <img src="image/1.jpg.png"width="500">
+    </section>
+    <section id="javascript">
+        <h2>topik pembahasan</h2>
+        <p>Di bawah ini ada topik topik pembahasan secara lengakap.</p>
+        <p>Dapatkan tutorial JavaScript lengkap <a href="https://docs.google.com/presentation/d/1xG5XaYPjh7AFgCkvkQGtee54eGzNUzgDSjNGPbJu8LY/edit?usp=sharing">di sini</a>.</p>
+        <img src="image/2.jpg.png"width="500">
+    </section>
+   <script>
+    <script>
+        var currentImage = 1;
+        var maxImages = 3; // assuming you have 3 images
+
+        function prev() {
+            if (currentImage > 1) {
+                currentImage--;
+            } else {
+                currentImage = maxImages;
+            }
+            updateImage();
+        }
+
+        function next() {
+            if (currentImage < maxImages) {
+                currentImage++;
+            } else {
+                currentImage = 1;
+            }
+            updateImage();
+        }
+
+        function updateImage() {
+            var imageElement = document.querySelector('#javascript img');
+            imageElement.src = 'image/' + currentImage + '.jpg.png';
+        }
+    </script>
+   </script>
+</body>
+</html>

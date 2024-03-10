@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="style.css">
+     
+</head>
+<body>
+    <div class="container">
+        <h1>Selamat Datang di website pendaftaran mahasiswa</h1>
+        <p>Terima kasih telah mengunjungi halaman kami. Dapatkan informasi terbaru layanan kami.</p>
+        <div class="carousel">
+            <div class="slides">
+                <div class="slide">
+                    <img src="image/images.jpg.jpg" alt="Foto Anda" class="landing-image" width="100%">
+                </div>
+                <div class="slide">
+                    <img src="image/foto.jpg.jpg" alt="Foto Anda" class="landing-image" width="100%">
+                </div>
+                <div class="slide">
+                    <img src="image/logo.png" alt="Foto Anda" class="landing-image" width="100%">
+                </div>
+            </div>
+        </div>
+        <a href="Form.html" class="btn">Daftar form</a>
+        <a href="jsdasar.html" class="btn">Kunjungi JS</a>
+    </div>
+    <script>
+        const slides = document.querySelector('.slides');
+        const slide = document.querySelectorAll('.slide');
+        let counter = 0;
+        const size = slide[0].clientWidth;
+        
+        setInterval(() => {
+            slides.style.transition = "transform 2s ease-in-out";
+            counter++;
+            slides.style.transform = 'translateX(' + (-size * counter) + 'px)';
+        }, 2000);
+        
+        slides.addEventListener('transitionend', () => {
+            if (counter >= slide.length - 1) {
+                slides.style.transition = "none";
+                counter = -1;
+                slides.style.transform = 'translateX(0)';
+            }
+        });
+    </script>
+</body>
+</html>
