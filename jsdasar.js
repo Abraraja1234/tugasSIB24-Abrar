@@ -17,4 +17,22 @@ const slides = document.querySelector('.slides');
                 slides.style.transform = 'translateX(0)';
             }
         });
-        console.log("Hello, World!");
+       
+        //struktur code
+         //* menampilkan alert
+         function tampilkanalert(){
+            return alert('hello kawan anjay')
+         }
+
+         var fullname = "abrar"
+         document.write(fullname)
+         document.write('br')
+
+         var fullname = "gatau"
+         document.write(fullname)
+         document.write('br')
+
+         var fullname = "lebih gatau lagi anjayy"
+         document.write(fullname)
+         document.write('br')
+

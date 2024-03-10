@@ -1,55 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>belajar js.dasar</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contoh JavaScript Dasar</title>
 </head>
 <body>
-    <header>
-        <h1>belajar js.dasar</h1>
-    </header>
-    <section id="javascript">
-        <h2>JavaScript</h2>
-        <p>JavaScript adalah bahasa pemrograman yang digunakan untuk membuat halaman web menjadi lebih interaktif.</p>
-        <p>Dapatkan tutorial JavaScript lengkap <a href="https://www.w3schools.com/js/">di sini</a>.</p>
-        <img src="image/1.jpg.png"width="500">
-    </section>
-    <section id="javascript">
-        <h2>topik pembahasan</h2>
-        <p>Di bawah ini ada topik topik pembahasan secara lengakap.</p>
-        <p>Dapatkan tutorial JavaScript lengkap <a href="https://docs.google.com/presentation/d/1xG5XaYPjh7AFgCkvkQGtee54eGzNUzgDSjNGPbJu8LY/edit?usp=sharing">di sini</a>.</p>
-        <img src="image/2.jpg.png"width="500">
-    </section>
-   <script>
-    <script>
-        var currentImage = 1;
-        var maxImages = 3; // assuming you have 3 images
 
-        function prev() {
-            if (currentImage > 1) {
-                currentImage--;
-            } else {
-                currentImage = maxImages;
-            }
-            updateImage();
-        }
+<h1>Contoh JavaScript Dasar</h1>
 
-        function next() {
-            if (currentImage < maxImages) {
-                currentImage++;
-            } else {
-                currentImage = 1;
-            }
-            updateImage();
-        }
+<!-- Ini adalah elemen HTML yang akan dimanipulasi oleh JavaScript -->
+<p id="demo">JavaScript akan mengubah teks ini.</p>
 
-        function updateImage() {
-            var imageElement = document.querySelector('#javascript img');
-            imageElement.src = 'image/' + currentImage + '.jpg.png';
-        }
-    </script>
-   </script>
+<!-- Input teks untuk nama pengguna -->
+<label for="nameInput">Masukkan nama Anda:</label>
+<input type="text" id="nameInput">
+<button onclick="sayHello()">Sapa Saya!</button>
+
+<!-- JavaScript -->
+<script>
+  // Ambil elemen dengan id "demo" dari dokumen HTML
+  var element = document.getElementById("demo");
+
+  // Ubah teks elemen tersebut
+  element.innerHTML = "Halo, dunia! Ini adalah JavaScript.";
+
+  // Munculkan pesan di konsol browser
+  console.log("Halo, ini adalah pesan di konsol!");
+
+  // Fungsi untuk memberi sapaan
+  function sayHello() {
+    // Ambil nilai dari input teks
+    var name = document.getElementById("nameInput").value;
+
+    // Periksa apakah nama telah dimasukkan
+    if (name) {
+      // Jika ada nama, beri sapaan
+      alert("Halo, " + name + "! Selamat datang di situs kami!");
+    } else {
+      // Jika tidak ada nama, beri peringatan
+      alert("Maaf, silakan masukkan nama Anda terlebih dahulu.");
+    }
+  }
+</script>
+
 </body>
 </html>
