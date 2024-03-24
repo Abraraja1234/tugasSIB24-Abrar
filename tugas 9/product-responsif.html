@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Styles for large screens */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url("D:/bahan/makanan3.jpg.jpg");
+            background-size: cover;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+        }
+
+        .nav .logo {
+            font-size: 1.5rem;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .nav ul {
+            list-style-type: none;
+            display: flex;
+        }
+
+        .nav ul li {
+            margin-right: 20px;
+        }
+
+        .nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 20px; /* Add margin for better spacing */
+        }
+
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            justify-items: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            max-width: 250px;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+        }
+
+        /* Media query for smaller screens */
+        @media (max-width: 480px) {
+            .nav {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .nav .logo {
+                margin-bottom: 10px;
+            }
+
+            .nav ul {
+                margin-top: 10px;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .nav ul li {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+
+            .card-container {
+                grid-template-columns: repeat(1, 1fr); /* Change to one column for mobile */
+            }
+            .card-container div {
+                font-size: 2rem;
+            }
+            h1 {
+                font-size: 10px; /* Decrease font size for smaller screens */
+                margin-top: 10px; /* Adjust margin for better spacing */
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <a href="#" class="logo">produk api</a>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="productarray.html">Array</a></li>
+        </ul>
+    </nav>
+    <h1>DAFTAR PRODUK KAMI</h1>
+    <div class="card-container" id="user-card">
+        <!-- Your product cards will be dynamically added here -->
+    </div>
+    <script src="product-responsif.js"></script>
+</body>
+</html>
